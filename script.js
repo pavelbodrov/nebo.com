@@ -81,7 +81,7 @@ function setCatalogImg(itemSelector, buttonSelector, id) //function that makes c
 				var url_o = "url(" + img_o	+ ")";
 				//$(itemSelector).css("background-image", url); //set catalog image
 				//alert(url);
-				if (window.innerWidth>=1080)
+				if (window.innerWidth>=1081)
 				{
 					$(itemSelector).hover( //set hover
 						function() {
@@ -96,18 +96,18 @@ function setCatalogImg(itemSelector, buttonSelector, id) //function that makes c
 				}
 				else
 				{
-					$(itemSelector).click( //set hover
-						function() {
+					$(itemSelector).click(function() {
+						if($(this).hasClass("clicked")) {
 							$(this).css('background-image', url_o);
 							$(buttonSelector).css('display', 'block');
-						}
-					);
-					$(itemSelector).click( //set hover
-						function() {
+							$(this).removeClass("clicked");
+						} else {
 							$(this).css('background-image', url);
 							$(buttonSelector).css('display', 'none');
+							$(this).addClass("clicked");
 						}
-					);
+					}); 
+
 				}
 			},
 				error: function() {

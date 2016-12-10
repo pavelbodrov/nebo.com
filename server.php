@@ -5,8 +5,8 @@
 	$data=$_POST['data'];
 	$decode_d=json_decode($data);
 	$db = new SQLite3('database.db');
-	$clientName = $db->escapeString($decode_d->fio);
-	$clientContact = $db->escapeString($decode_d->email);
+	$clientName = mb_strtoupper ($db->escapeString($decode_d->fio), "UTF-8");
+	$clientContact = mb_strtoupper ($db->escapeString($decode_d->email), "UTF-8");
 	$queryClients = $db->query("INSERT INTO Clients (ClientName, ClientContact) VALUES ('$clientName', '$clientContact')");
 	$lastClientId = $db->lastInsertRowid();
 	//данные для вставки в таблицу заказов
