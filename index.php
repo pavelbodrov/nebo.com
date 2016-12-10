@@ -295,8 +295,22 @@
 			
 			<script>
 				$(document).ready(function(){
+					var width = window.innerWidth;
+					var slidesQuantity=0;
+					if ((width>=320)&&(width<=1080))
+					{
+						slidesQuantity = 1;
+					}
+					else if (width>=1081)
+					{
+						slidesQuantity = 3;
+					}
+					else
+					{
+						slidesQuantity = 3;
+					}
 					$(".slider").slick({
-						slidesToShow:3,
+						slidesToShow:slidesQuantity,
 						prevArrow: '.catolog-container .prev',
 						nextArrow: '.catolog-container .next',
 					});

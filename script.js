@@ -81,16 +81,34 @@ function setCatalogImg(itemSelector, buttonSelector, id) //function that makes c
 				var url_o = "url(" + img_o	+ ")";
 				//$(itemSelector).css("background-image", url); //set catalog image
 				//alert(url);
-				$(itemSelector).hover( //set hover
-					function() {
-						$(this).css('background-image', url_o);
-						$(buttonSelector).css('display', 'block');
-					},
-					function() {
-						$(this).css('background-image', url);
-						$(buttonSelector).css('display', 'none');
-					}
-				);
+				if (window.innerWidth>=1080)
+				{
+					$(itemSelector).hover( //set hover
+						function() {
+							$(this).css('background-image', url_o);
+							$(buttonSelector).css('display', 'block');
+						},
+						function() {
+							$(this).css('background-image', url);
+							$(buttonSelector).css('display', 'none');
+						}
+					);
+				}
+				else
+				{
+					$(itemSelector).click( //set hover
+						function() {
+							$(this).css('background-image', url_o);
+							$(buttonSelector).css('display', 'block');
+						}
+					);
+					$(itemSelector).click( //set hover
+						function() {
+							$(this).css('background-image', url);
+							$(buttonSelector).css('display', 'none');
+						}
+					);
+				}
 			},
 				error: function() {
 					alert('Error!');
@@ -148,9 +166,11 @@ function setModalData(img1, img2, img3, img4, price, type, id) //function that f
 {
 		var modal = document.getElementById('modal-window');
 		$(".modal-container").css("display","block");
+		$("html,body").css("overflow","hidden");
 		
 		$(".close").click(function(){
 			$(".modal-container").css("display","none");
+			$("html,body").css("overflow","auto");
 		});
 		$(window).click(function(event){
 			if (event.target == modal) {
