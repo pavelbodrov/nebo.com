@@ -707,10 +707,9 @@ html, body{
 	}
 
 	.form .informer {
-		display:none;
 		opacity:0;
 		font-family:uni_sans_heavy;
-		font-size:2.2vh;
+		font-size:1.8vh;
 		height:1vh;
 		text-align:center;
 		transition:1s;
