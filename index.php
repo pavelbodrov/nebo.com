@@ -45,10 +45,13 @@
 		<script>
 			$(".open-menu").click(function(){
 				$(".menu").css("right", "0");
+				$(".open-menu").css("right", "-5vh");
 			});
 			$(".close-menu").click(function(){
 				$(".menu").css("right", "-50%");
-				$(".open-menu").css("display", "block");
+				//$(".open-menu").css("display", "block");
+				$(".open-menu").css("background-image", "url('ver2/menu_white.png')");
+				$(".open-menu").css("right", "5vh");
 			});	
 		</script>
 		<div class="slider-container">

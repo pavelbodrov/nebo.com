@@ -166,12 +166,14 @@ function setModalData(img1, img2, img3, img4, price, type, id) //function that f
 {
 		var modal = document.getElementById('modal-window');
 		$(".modal-container").css("display","block");
-		$("html,body").css("overflow","hidden");
+		$("body,html").addClass("modal-open");
 		
 		$(".close").click(function(){
 			$(".modal-container").css("display","none");
-			$("html,body").css("overflow","auto");
+			$("body,html").removeClass("modal-open");
 		});
+		
+		
 		$(window).click(function(event){
 			if (event.target == modal) {
 				$(".modal-container").css("display","none");

@@ -73,16 +73,17 @@ html, body{
 		background-size:cover;
 		z-index:5;
 		opacity:1;
-		cursor:pointer;		
+		cursor:pointer;	
+		transition:1s;
 	}
 
 	.close-menu {
 		position:absolute;
-		right:3.3vh;
-		top:3.3vh;
+		right:5vh;
+		top:5vh;
 		width:5vh;
 		height:5vh;
-		background-image:url("ver2/without_image.png");
+		background-image:url("ver2/menu_black.png");
 		background-size:cover;
 		cursor:pointer;
 	}		
@@ -223,6 +224,7 @@ html, body{
 	}
 
 	.fadeIn-div p {
+		display:block;
 		margin-top:2.5vh;
 		margin-bottom:2.5vh;
 		font-size:3.3vh;
@@ -230,16 +232,17 @@ html, body{
 		letter-spacing:0.1vh;
 		line-height:4.4vh;
 		color:white;	
-		display:inline-block;
 	}
 
 	.fadeIn-div img {
 		margin-top:2.5vh;
 		margin-bottom:2.5vh;
-		display:inline-block;
+		display:block;
 		width:15vh;
 		height:15vh;
-		}
+		margin-left:auto;
+		margin-right:auto;
+	}
 
 	.catolog-container {
 		position:relative;

@@ -5,10 +5,27 @@
 	$data=$_POST['data'];
 	$decode_d=json_decode($data);
 	$db = new SQLite3('database.db');
+	
 	$clientName = mb_strtoupper ($db->escapeString($decode_d->fio), "UTF-8");
 	$clientContact = mb_strtoupper ($db->escapeString($decode_d->email), "UTF-8");
-	$queryClients = $db->query("INSERT INTO Clients (ClientName, ClientContact) VALUES ('$clientName', '$clientContact')");
-	$lastClientId = $db->lastInsertRowid();
+	
+	$searchQuery = $db->query("SELECT ClientID FROM Clients WHERE ClientName = '$clientName' AND ClientContact = '$clientContact'"); //проверка на наличие данных клиента в базе
+	$checkClient = $searchQuery->fetchArray();
+	
+	$clientId;
+	
+	if (empty($checkClient)) //если клиента нет, создаем запись в БД
+	{
+		$queryClients = $db->query("INSERT INTO Clients (ClientName, ClientContact) VALUES ('$clientName', '$clientContact')");
+		$lastClientId = $db->lastInsertRowid();
+		$clientId = $lastClientId;
+	}
+	else //если есть, используем его ID
+	{		
+		$clientId = $checkClient['ClientID'];
+	}
+	
+
 	//данные для вставки в таблицу заказов
 	$orderDate = date("d.m.Y"); //currentDate
 	date_default_timezone_set("Etc/GMT-6");
@@ -20,7 +37,7 @@
 	$d_address = $db->escapeString($decode_d->d_address);
 	
 	$queryOrders = $db->query("INSERT INTO Orders (OrderDate, OrderTime, ItemID, SizeID, OrderQuantity, OrderCost, ClientID, OrderDeliveryAddress, OrderDeliveryDate) 
-	VALUES ('$orderDate', '$orderTime', '$itemId', (SELECT SizeID FROM Sizes WHERE SizeName = '$sizeVal'), 1, '$price', '$lastClientId', '$d_address', '$d_date')");
+	VALUES ('$orderDate', '$orderTime', '$itemId', (SELECT SizeID FROM Sizes WHERE SizeName = '$sizeVal'), 1, '$price', '$clientId', '$d_address', '$d_date')");
 	
 	//!!!!!!!!!!!! SEND MESSAGE TO MANAGER
 	//('$orderDate', '$orderTime', 1, (SELECT SizeID FROM Sizes WHERE SizeName = '$sizeVal'), '1', '$price', '7', '$d_date', '$d_address')");
