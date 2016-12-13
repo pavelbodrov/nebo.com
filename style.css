@@ -20,6 +20,37 @@ html, body{
 	margin:0px;
 	height:100%;
 }
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+  animation-duration:2s;
+}
 
 @media only screen and (min-width : 320px) and (max-width : 1080px){
 	.bird-logo{
@@ -69,7 +100,7 @@ html, body{
 		top:5vh;
 		width:5vh;
 		height:5vh;
-		background-image:url("ver2/menu_white.png");
+		background-image:url("images/icons/menu_white.png");
 		background-size:cover;
 		z-index:5;
 		opacity:1;
@@ -83,7 +114,7 @@ html, body{
 		top:5vh;
 		width:5vh;
 		height:5vh;
-		background-image:url("ver2/menu_black.png");
+		background-image:url("images/icons/menu_black.png");
 		background-size:cover;
 		cursor:pointer;
 	}		
@@ -114,7 +145,7 @@ html, body{
 	.slider-container .slide1 {
 		display:block;
 		width:100%;
-		background-image:url("ver2/background1.png");
+		background-image:url("images/icons/background1.png");
 		background-position:89% center;
 		background-repeat:no-repeat;
 		background-size:cover;
@@ -137,7 +168,7 @@ html, body{
 		width:25vh;
 		height:22.5vh;
 		margin: auto;
-		background-image:url("ver2/logo_startpage_white.png");
+		background-image:url("images/icons/logo_startpage_white.png");
 		background-position:center center;
 		background-repeat:no-repeat;
 		background-size:cover;
@@ -148,7 +179,7 @@ html, body{
 	.slider-container .slide2 {
 		display:none;
 		width:100%;
-		background-image:url("ver2/background2.png");
+		background-image:url("images/icons/background2.png");
 		background-position:50% center;
 		background-repeat:no-repeat;
 		background-size:cover;
@@ -164,7 +195,7 @@ html, body{
 	.slider-container .slide3 {
 		display:none;
 		width:100%;
-		background-image:url("ver2/background3.png");
+		background-image:url("images/icons/background3.png");
 		background-position:24% center;
 		background-repeat:no-repeat;
 		background-size:cover;
@@ -309,7 +340,7 @@ html, body{
 	}
 
 	.controllers .next{
-		background-image:url("ver2/icon_right.png");
+		background-image:url("images/icons/icon_right.png");
 		background-repeat:no-repeat;
 		background-position:center center;
 		right:1%;
@@ -318,7 +349,7 @@ html, body{
 	}
 
 	.controllers .prev{
-		background-image:url("ver2/icon_left.png");
+		background-image:url("images/icons/icon_left.png");
 		background-repeat:no-repeat;
 		background-position:center center;
 		left:1%;
@@ -780,7 +811,7 @@ html, body{
 		position:absolute;
 		left:5%;
 		top:1vw;
-		background-image:url("ver2/header_bird.png");
+		background-image:url("images/icons/header_bird.png");
 		background-position:center center;
 		background-repeat:no-repeat;
 		background-size:cover;
@@ -815,7 +846,7 @@ html, body{
 	.slider-container .slide1 {
 		display:block;
 		width:100%;
-		background-image:url("ver2/background1.png");
+		background-image:url("images/icons/background1.png");
 		background-position:center center;
 		background-repeat:no-repeat;
 		background-size:cover;
@@ -839,7 +870,7 @@ html, body{
 		width:25vh;
 		height:22.5vh;
 		margin: auto;
-		background-image:url("ver2/logo_startpage.png");
+		background-image:url("images/icons/logo_startpage.png");
 		background-position:center center;
 		background-repeat:no-repeat;
 		background-size:cover;
@@ -850,7 +881,7 @@ html, body{
 	.slider-container .slide2 {
 		display:none;
 		width:100%;
-		background-image:url("ver2/background2.png");
+		background-image:url("images/icons/background2.png");
 		background-position:center center;
 		background-repeat:no-repeat;
 		background-size:cover;
@@ -878,7 +909,7 @@ html, body{
 	.slider-container .slide3 {
 		display:none;
 		width:100%;
-		background-image:url("ver2/background3.png");
+		background-image:url("images/icons/background3.png");
 		background-position:center center;
 		background-repeat:no-repeat;
 		background-size:cover;
@@ -940,7 +971,7 @@ html, body{
 		left:49%;
 		width:2%;
 		height:2%;
-		background-image:url("ver2/icon-down.png");
+		background-image:url("images/icons/icon-down.png");
 		background-position:center center;
 		background-repeat:no-repeat;
 		background-size:cover;
@@ -1064,14 +1095,14 @@ html, body{
 	}
 
 	.controllers .next{
-		background-image:url("ver2/icon_right.png");
+		background-image:url("images/icons/icon_right.png");
 		background-repeat:no-repeat;
 		background-position:center center;
 		right:1%;
 	}
 
 	.controllers .prev{
-		background-image:url("ver2/icon_left.png");
+		background-image:url("images/icons/icon_left.png");
 		background-repeat:no-repeat;
 		background-position:center center;
 		left:1%;

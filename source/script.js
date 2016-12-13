@@ -243,13 +243,13 @@ function viewMenu() //function that checks which part of the site user is curren
 			$('.menu-href').css("color","#282828");
 			$('.menu-href').eq(1).css('color', "#989898");
 		}
-		else if ($('#faq').isOnScreen(0.5,0.5))
+		else if ($('#faq').isOnScreen(0.6,0.6))
 		{
 			//alert("vuu");
 			$('.menu-href').css("color","#282828");
 			$('.menu-href').eq(2).css('color', "#989898");
 		}
-		else if ($('#contacts').isOnScreen())
+		else if ($('#contacts').isOnScreen(0.9,0.9))
 		{
 			//alert("vuu");
 			$('.menu-href').css("color","#282828");
@@ -307,5 +307,4 @@ function activateEffects() { //function activator
 	blockFading();
 	catalogHover();
 	smoothHrefs();
-	//modal("900");
 }

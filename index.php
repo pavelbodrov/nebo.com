@@ -2,23 +2,22 @@
 <html>
 	<head>
 		<title>«Небо» - одежда, сделанная на Урале</title>
-		<link rel="shortcut icon" href="ver2/favicon.ico" type="image/x-icon">
+		<link rel="shortcut icon" href="images/icons/favicon.ico" type="image/x-icon">
 		 
 		<link rel="stylesheet" type="text/css" href="style.css">
-		<link rel="stylesheet" type="text/css" href="animate.css">
-		<link rel="stylesheet" type="text/css" href="slick/slick.css"/>
-		<link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+		<link rel="stylesheet" type="text/css" href="source/slick/slick.css"/>
+		<link rel="stylesheet" type="text/css" href="source/slick/slick-theme.css"/>
 		<link rel="stylesheet" type="text/css" href="jquery-ui.min.css">
 		
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		
-		<script src="jquery-1.9.1.min.js"></script>
-		<script src="jQuery.scrollSpeed.js"></script>
-		<script src="jquery.viewportchecker.min.js"></script>
-		<script type="text/javascript" src="slick/slick.min.js"></script>
-		<script src="jquery.isonscreen.js"></script>
-		<script src="jquery-ui.min.js"></script>
-		<script src="script.js"></script>
+		<script src="source/jquery-1.9.1.min.js"></script>
+		<script src="source/jQuery.scrollSpeed.js"></script>
+		<script src="source/jquery.viewportchecker.min.js"></script>
+		<script type="text/javascript" src="source/slick/slick.min.js"></script>
+		<script src="source/jquery.isonscreen.js"></script>
+		<script src="source/jquery-ui.min.js"></script>
+		<script src="source/script.js"></script>
 		
 		<script>
 			$(function() {  
@@ -50,7 +49,7 @@
 			$(".close-menu").click(function(){
 				$(".menu").css("right", "-50%");
 				//$(".open-menu").css("display", "block");
-				$(".open-menu").css("background-image", "url('ver2/menu_white.png')");
+				$(".open-menu").css("background-image", "url('images/icons/menu_white.png')");
 				$(".open-menu").css("right", "5vh");
 			});	
 		</script>
@@ -90,15 +89,15 @@
 				
 				<div class="fadeIn-div">
 					<p>мы устали видеть на повседневной одежде чужие слова,<br>чужие портреты и чужие флаги, устали видеть людей,<br>необдуманно живущих на волнах чужой культуры.</p>
-					<img class="icon-usa" src="ver2/icon_usa.png">
+					<img class="icon-usa" src="images/icons/icon_usa.png">
 				</div>
 				<div class="fadeIn-div">
 					<p>мы хотим придумывать и создавать качественную<br>одежду там, где мы родились, хотим доказать,<br>что каждому из нас есть что показать.</p>
-					<img class="icon-russia" src="ver2/icon_russia.png">
+					<img class="icon-russia" src="images/icons/icon_russia.png">
 				</div>
 				<div class="fadeIn-div">
 					<p>мы - небо,<br>и если ты с нами,<br>ты на высоте.</p>
-					<img class="icon-bird" src="ver2/icon_bird.png">					
+					<img class="icon-bird" src="images/icons/icon_bird.png">					
 				</div>	
 				
 		</div>
@@ -154,7 +153,7 @@
 							<div class="delivery">
 								<input placeholder="адрес доставки" class="inp-form d_address" id="address" name="d_address" type="text">
 								<input placeholder="дата" class="inp-form d_date" id="datepicker" name="d_date" type="text">
-								<img src="ver2/calendar.png" id="calendar">
+								<img src="images/icons/calendar.png" id="calendar">
 							</div>
 							<button id="val" class="inp-form send-button" type="button" name="send-form">заказать</button>
 							<div class="informer"></div>
@@ -358,8 +357,8 @@
 					</div>
 				</div>
 				<div class="social">
-					<a href="https://vk.com"><img src="ver2/VK_Icon.png">
-					<a href="https://www.instagram.com"><img src="ver2/Instagram_Icon.png"></a>
+					<a href="https://vk.com"><img src="images/icons/VK_Icon.png">
+					<a href="https://www.instagram.com"><img src="images/icons/Instagram_Icon.png"></a>
 					<span class="email">NEBO@GMAIL.com</span>
 					<span class="made-in">сделано в <span class="chel">челябинске</span></span>
 				</div>
